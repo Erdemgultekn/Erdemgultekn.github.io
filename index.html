@@ -3,378 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erdem Gültekin | Mühendislik Portfolyosu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Erdem Gültekin | Makine Mühendisi Portfolyosu</title>
   <style>
-    :root {
-      --bg-dark: #0b1120;
-      --bg-card: #1e293b;
-      --bg-card-hover: #24344d;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-hover: #0ea5e9;
-      --border: #334155;
-      --badge-bg: rgba(56, 189, 248, 0.1);
-      --badge-text: #38bdf8;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #0b1120; color: #f8fafc; line-height: 1.6; }
+    
+    /* Header & Nav */
+    header { position: sticky; top: 0; background: #0f172a; border-bottom: 1px solid #1e293b; z-index: 100; }
+    nav { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: #fff; text-decoration: none; }
+    .logo span { color: #38bdf8; }
+    .nav-links { display: flex; gap: 1.25rem; list-style: none; align-items: center; }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #38bdf8; }
+    .btn-contact { background: #38bdf8; color: #0b1120 !important; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 6px; }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+    /* Layout */
+    .container { max-width: 1050px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .hero { padding: 4rem 1.5rem 2rem; max-width: 1050px; margin: 0 auto; }
+    .badge { display: inline-block; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+    .lead { font-size: 1.1rem; color: #94a3b8; max-width: 720px; margin-bottom: 1.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
+    .btn-blue { background: #38bdf8; color: #0b1120; }
+    .btn-outline { border: 1px solid #334155; color: #f8fafc; }
+    .btn-outline:hover { background: #1e293b; }
 
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    /* Navigation */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(11, 17, 32, 0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: -0.5px;
-      color: var(--text-main);
-      text-decoration: none;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .btn-nav {
-      background: var(--accent);
-      color: #0b1120 !important;
-      padding: 0.45rem 1rem;
-      border-radius: 6px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
-
-    .btn-nav:hover {
-      background: var(--accent-hover) !important;
-    }
-
-    /* Container */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 4rem 1.5rem 3rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--badge-bg);
-      color: var(--badge-text);
-      padding: 0.35rem 0.85rem;
-      border-radius: 9999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-    }
-
-    .hero h1 {
-      font-size: 2.75rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      letter-spacing: -1px;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 750px;
-      margin-bottom: 2rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0b1120;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text-main);
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .btn-secondary:hover {
-      background: var(--bg-card);
-      border-color: var(--accent);
-    }
-
-    /* Section Headers */
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.5px;
-    }
-
-    .section-subtitle {
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      font-size: 1rem;
-    }
-
+    /* Sections */
+    .section-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .section-sub { color: #64748b; margin-bottom: 2rem; font-size: 0.95rem; }
+    
     /* Cards */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .card-meta {
-      color: var(--accent);
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .card-date {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    .card ul {
-      margin-left: 1.25rem;
-      color: var(--text-muted);
-      margin-top: 0.75rem;
-    }
-
-    .card li {
-      margin-bottom: 0.4rem;
-    }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .card-top { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .card-title { font-size: 1.2rem; font-weight: 600; }
+    .card-sub { color: #38bdf8; font-size: 0.9rem; }
+    .card-date { color: #94a3b8; font-size: 0.85rem; }
+    .card ul { margin-left: 1.25rem; color: #cbd5e1; margin-top: 0.75rem; font-size: 0.95rem; }
+    .card li { margin-bottom: 0.4rem; }
 
     /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .skill-box { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 1.25rem; }
+    .skill-title { font-weight: 600; color: #38bdf8; margin-bottom: 0.75rem; font-size: 0.95rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag { background: #0b1120; border: 1px solid #334155; color: #94a3b8; font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 4px; }
 
-    .skill-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem;
-    }
+    /* Project Cards */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .project-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    .project-img-box { background: #0f172a; height: 160px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #334155; color: #94a3b8; text-align: center; padding: 1rem; }
+    .project-content { padding: 1.25rem; flex-grow: 1; display: flex; flex-direction: column; }
+    .project-name { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .project-desc { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem; flex-grow: 1; }
 
-    .skill-category {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-      color: var(--accent);
-    }
-
-    .tag-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .tag {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-    }
-
-    /* Portfolio Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-media {
-      width: 100%;
-      height: 200px;
-      background: #0f172a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    .project-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .project-body {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .project-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.25rem;
-      flex-grow: 1;
-    }
-
-    /* Contact & Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      background: #080d19;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .contact-links a {
-      color: var(--text-main);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .contact-links a:hover {
-      color: var(--accent);
-    }
-
-    .footer-copy {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .nav-links { display: none; }
-    }
+    /* Footer */
+    footer { border-top: 1px solid #1e293b; background: #080d19; padding: 3rem 1.5rem; text-align: center; }
+    .contact-row { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+    .contact-row a { color: #f8fafc; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    .contact-row a:hover { color: #38bdf8; }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Nav -->
   <header>
     <nav>
       <a href="#" class="logo">Erdem <span>Gültekin</span></a>
@@ -382,4 +75,180 @@
         <li><a href="#about">Eğitim</a></li>
         <li><a href="#experience">Deneyim</a></li>
         <li><a href="#skills">Yetkinlikler</a></li>
-        <li><a href="#
+        <li><a href="#projects">Projeler</a></li>
+        <li><a href="#contact" class="btn-contact">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="badge">● Aday / Part-Time Mühendis Adayı</span>
+    <h1>Mühendislik Portfolyosu</h1>
+    <p class="lead">
+      Yaşar Üniversitesi Makine Mühendisliği 4. sınıf öğrencisiyim. Döner ekipmanlar, termik santral türbin majör revizyonları (overhaul), şaft hizalama ve SolidWorks ile imalata yönelik tasarım (DFM & GD&T) konularında saha ve tasarım yetkinliğine sahibim.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-blue">Projeleri İncele</a>
+      <a href="https://www.linkedin.com/in/erdem-g%C3%BCltekin-13712a439" target="_blank" class="btn btn-outline">LinkedIn Profili</a>
+      <a href="mailto:erdemgultekin48@hotmail.com" class="btn btn-outline">E-posta Gönder</a>
+    </div>
+  </section>
+
+  <!-- Eğitim -->
+  <section class="container" id="about">
+    <h2 class="section-title">Eğitim</h2>
+    <p class="section-sub">Akademik geçmiş ve temel mühendislik dersleri</p>
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <div class="card-title">Yaşar Üniversitesi</div>
+          <div class="card-sub">Makine Mühendisliği Lisans (%100 İngilizce Programı)</div>
+        </div>
+        <div class="card-date">2021 – 2026 (Beklenen Mezuniyet)</div>
+      </div>
+      <p style="color: #94a3b8; font-size: 0.95rem;">
+        <strong>İlgili Dersler:</strong> Isı Transferi, Termodinamik, Akışkanlar Mekaniği, Makine Elemanları, İmalat Yöntemleri, Malzeme Bilimi.
+      </p>
+    </div>
+  </section>
+
+  <!-- Deneyim -->
+  <section class="container" id="experience" style="padding-top: 0;">
+    <h2 class="section-title">Teknik Saha Deneyimi</h2>
+    <p class="section-sub">Santral ortamında türbin ve mekanik bakım tecrübesi</p>
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <div class="card-title">Türbin Bakım & Onarım Stajyeri</div>
+          <div class="card-sub">Yeniköy-Kemerköy Termik Santrali — Muğla</div>
+        </div>
+        <div class="card-date">Haziran 2026 – Temmuz 2026</div>
+      </div>
+      <ul>
+        <li>Buhar ve gaz türbinlerinin planlı majör mekanik bakım (overhaul) süreçlerinde sahada aktif görev alındı.</li>
+        <li>Rotor çıkarma ve gövde açma operasyonları takip edilerek türbin kanatçıklarının NDT ve görsel kontrolleri yapıldı.</li>
+        <li>Radyal ve eksenel kaymalı yataklarda sentil ve komparatörler yardımıyla yatak boşluğu (bearing clearance) ölçüldü.</li>
+        <li>Lazerli şaft kaplin hizalama ve dinamik balans alma prosedürlerine katılım sağlandı.</li>
+        <li>Labirent sızdırmazlık salmastraları, yüksek basınç buhar vanaları ve borulama hatlarının montajı kontrol edildi.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Yetkinlikler -->
+  <section class="container" id="skills" style="padding-top: 0;">
+    <h2 class="section-title">Teknik Yetkinlikler</h2>
+    <p class="section-sub">Yazılımlar, metroloji ve endüstriyel pratikler</p>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <div class="skill-title">Mekanik Bakım & Döner Ekipman</div>
+        <div class="tag-list">
+          <span class="tag">Türbin Overhaul</span>
+          <span class="tag">Lazer Hizalama</span>
+          <span class="tag">Dinamik Balans</span>
+          <span class="tag">Yatak Boşluğu</span>
+          <span class="tag">ISO 10816</span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-title">Mühendislik Yazılımları</div>
+        <div class="tag-list">
+          <span class="tag">SolidWorks (CAD)</span>
+          <span class="tag">Teknik Resim</span>
+          <span class="tag">ANSYS Workbench</span>
+          <span class="tag">MATLAB</span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-title">Metroloji & Standartlar</div>
+        <div class="tag-list">
+          <span class="tag">P&ID Okuma</span>
+          <span class="tag">GD&T</span>
+          <span class="tag">DFM</span>
+          <span class="tag">Komparatör</span>
+          <span class="tag">Sentil / Mikrometre</span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-title">Diller</div>
+        <div class="tag-list">
+          <span class="tag">Türkçe (Anadil)</span>
+          <span class="tag">İngilizce (%100 Lisans)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projeler -->
+  <section class="container" id="projects" style="padding-top: 0;">
+    <h2 class="section-title">Proje & Uygulama Portfolyosu</h2>
+    <p class="section-sub">Saha uygulamaları, tasarım ve analitik çalışmalar</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-img-box">
+          <div>
+            <strong>⚙️ Türbin Overhaul & Yatak Ölçümü</strong><br>
+            <small>Yeniköy Termik Santrali</small>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-name">Türbin Revizyonu ve Yatak Ölçümleri</div>
+          <p class="project-desc">Buhar türbini kaymalı yataklarında eksenel/radyal tolerans ölçümleri ve lazerli kaplin ayarı.</p>
+          <div class="tag-list">
+            <span class="tag">Overhaul</span>
+            <span class="tag">Lazer Hizalama</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-box">
+          <div>
+            <strong>📐 Mekanik Modelleme & DFM</strong><br>
+            <small>SolidWorks 3D CAD & Teknik Resim</small>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-name">İmalata Yönelik Mekanik Tasarım</div>
+          <p class="project-desc">Talaşlı imalat standartlarına ve GD&T kurallarına uygun 3D parça modelleme ve antetli teknik resimler.</p>
+          <div class="tag-list">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">GD&T</span>
+            <span class="tag">DFM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-img-box">
+          <div>
+            <strong>📊 Termo-Akışkan & Eşanjör Analizi</strong><br>
+            <small>Hesaplamalı Mühendislik</small>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-name">Eşanjör Boyutlandırma & Basınç Kaybı</div>
+          <p class="project-desc">LMTD yöntemiyle ısı değiştirici ısı transfer alanı ve boru sürtünme kaybı hesapları (MATLAB).</p>
+          <div class="tag-list">
+            <span class="tag">Termodinamik</span>
+            <span class="tag">MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim / Footer -->
+  <footer id="contact">
+    <h2 style="font-size: 1.4rem; margin-bottom: 0.5rem;">İletişim</h2>
+    <p style="color: #94a3b8; font-size: 0.9rem;">İzmir, Bornova | Haftada 3 Tam Gün Çalışma Takvimi</p>
+    <div class="contact-row">
+      <a href="mailto:erdemgultekin48@hotmail.com">✉ erdemgultekin48@hotmail.com</a>
+      <a href="tel:+905386280999">📞 +90 538 628 09 99</a>
+      <a href="https://www.linkedin.com/in/erdem-g%C3%BCltekin-13712a439" target="_blank">🔗 LinkedIn</a>
+    </div>
+    <p style="color: #475569; font-size: 0.8rem;">© 2026 Erdem Gültekin. GitHub Pages ile barındırılmaktadır.</p>
+  </footer>
+
+</body>
+</html>
